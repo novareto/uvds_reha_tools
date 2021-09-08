@@ -1,0 +1,2067 @@
+{
+  "name": "LD_000_0A1109",
+  "beschreibung": "Abgabemitteilung an Ärzte",
+  "version": "27.329",
+  "objekte": {
+    "objekt": [
+      {
+        "typ": "WEBSERVICE",
+        "name": "Versicherungsfall_ID",
+        "technischerName": "W_rtvVersfallIDByAktenzeichen",
+        "sichtbar": false,
+        "gruppen": {
+          "gruppe": [
+            {
+              "technischerName": "W_rtvVersfallIDByAktenzeichen",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": [
+                  {
+                    "typ": "SCHLUESSELFELD",
+                    "name": "W_rtvVersfallIDByAktenzeichen_Aktenzeichen_IN",
+                    "beschriftung": "Aktenzeichen",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 1,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": true,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "aufrufparameter": "aktenzeichen",
+                    "freieEingabeErlaubt": true,
+                    "werteTrennen": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "typ": "WEBSERVICE",
+        "name": "Versicherungsfall",
+        "technischerName": "W_rtvVersicherungsfallByID",
+        "sichtbar": false,
+        "gruppen": {
+          "gruppe": [
+            {
+              "technischerName": "W_rtvVersicherungsfallByID",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": [
+                  {
+                    "typ": "SCHLUESSELFELD",
+                    "name": "W_rtvVersicherungsfallByID_versicherungsfallID_IN",
+                    "beschriftung": "Versicherungsfall-ID",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 1,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": true,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "aufrufparameter": "versicherungsfall_id",
+                    "freieEingabeErlaubt": true,
+                    "quellWebserviceattribut": "rtvVersfallIDByAktenzeichen_versicherungsfallID_OUT",
+                    "werteTrennen": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "typ": "WEBSERVICE",
+        "name": "BetreffFuerSonstige",
+        "technischerName": "W_rtvBetreffSonstigeByVersicherungsfallID",
+        "sichtbar": false,
+        "gruppen": {
+          "gruppe": [
+            {
+              "technischerName": "W_rtvBetreffSonstigeByVersicherungsfallID",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": [
+                  {
+                    "typ": "SCHLUESSELFELD",
+                    "name": "W_rtvBetreffSonstigeByVersicherungsfallID_versicherungsfallID_IN",
+                    "beschriftung": "Versicherungsfall-ID",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 1,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": true,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "aufrufparameter": "versicherungsfall_id",
+                    "freieEingabeErlaubt": true,
+                    "quellWebserviceattribut": "rtvVersfallIDByAktenzeichen_versicherungsfallID_OUT",
+                    "werteTrennen": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "typ": "WEBSERVICE",
+        "name": "Versichertenname",
+        "technischerName": "W_rtvVersichertenNameByPersonID",
+        "sichtbar": false,
+        "gruppen": {
+          "gruppe": [
+            {
+              "technischerName": "W_rtvVersichertenNameByPersonID",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": [
+                  {
+                    "typ": "SCHLUESSELFELD",
+                    "name": "W_rtvVersichertenNameByPersonID_personID_IN",
+                    "beschriftung": "PersonID",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 1,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": true,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "aufrufparameter": "personid",
+                    "freieEingabeErlaubt": true,
+                    "quellWebserviceattribut": "rtvVersicherungsfallByID_personID_OUT",
+                    "werteTrennen": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "typ": "WEBSERVICE",
+        "name": "VersichertenDaten",
+        "technischerName": "W_rtvVersichertePersonByID",
+        "sichtbar": false,
+        "gruppen": {
+          "gruppe": [
+            {
+              "technischerName": "W_rtvVersichertePersonByID",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": [
+                  {
+                    "typ": "SCHLUESSELFELD",
+                    "name": "W_rtvVersichertePersonByID_personID_IN",
+                    "beschriftung": "PersonID",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 1,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": true,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "aufrufparameter": "personid",
+                    "freieEingabeErlaubt": true,
+                    "quellWebserviceattribut": "rtvVersicherungsfallByID_personID_OUT",
+                    "werteTrennen": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "typ": "WEBSERVICE",
+        "name": "IKAdressdaten",
+        "technischerName": "W_rtvAufbereiteteAdresseByIKNummer",
+        "sichtbar": true,
+        "gruppen": {
+          "gruppe": [
+            {
+              "technischerName": "W_rtvAufbereiteteAdresseByIKNummer",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": [
+                  {
+                    "typ": "SCHLUESSELFELD",
+                    "name": "W_rtvAufbereiteteAdresseByIKNummer_ikNummer_IN",
+                    "beschriftung": "IK-Nummer - Abgabe UVT",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 1,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "freieEingabeErlaubt": true,
+                    "quellWebserviceattribut": "rtvVersicherungsfallByID_ikNummerUVTraeger_OUT",
+                    "werteTrennen": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "typ": "ADRESSTYP_DATENERMITTLUNG",
+        "technischerName": "Adresstypdatenermittlung",
+        "sichtbar": true,
+        "gruppen": {
+          "gruppe": [
+            {
+              "name": "IK-Nummer (RuL)",
+              "technischerName": "IK-Nummer",
+              "gruppen": {
+               "gruppe": []
+              },
+              "variablen": {
+                "variable": [
+                  {
+                    "typ": "ADRESSTYPEINGABEVARIABLE",
+                    "name": "Z_IK_Nummer_rtvAufbereiteteAdresseByIKNummer_ikNummer_IN",
+                    "beschriftung": "ikNummer",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 1,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "freieEingabeErlaubt": true,
+                    "inputWebserviceattribut": "rtvAufbereiteteAdresseByIKNummer_ikNummer_IN"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Freier Adressat (RuL)",
+              "technischerName": "Freier Adressat (RuL)",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "typ": "ADRESSBUCH_DATENERMITTLUNG",
+        "technischerName": "Adressbuchdatenermittlung",
+        "sichtbar": true,
+        "gruppen": {
+          "gruppe": [
+            {
+              "name": "Cusa-Falladressbuch (RuL)",
+              "technischerName": "Falladressbuch",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": []
+              }
+            },
+            {
+              "name": "Gesamtbestand IK-Nummern Cusa (RuL)",
+              "technischerName": "IK-Adressbuch(RuL)",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "typ": "FUSSZEILE_DATENERMITTLUNG",
+        "technischerName": "Fußzeiledatenermittlung",
+        "sichtbar": false,
+        "gruppen": {
+          "gruppe": [
+            {
+              "name": "Standard-Fußzeile (RuL)",
+              "technischerName": "Standard-Fußzeile (RuL)",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": [
+                  {
+                    "typ": "FUSSZEILEEINGABEVARIABLE",
+                    "name": "Z_Standard_Fusszeile__RuL__rtvFusszeileByLogin_login_IN",
+                    "beschriftung": "login",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 1,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "aufrufparameter": "login",
+                    "freieEingabeErlaubt": true,
+                    "inputWebserviceattribut": "rtvFusszeileByLogin_login_IN"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "typ": "KOPFZEILE_DATENERMITTLUNG",
+        "technischerName": "Kopfzeiledatenermittlung",
+        "sichtbar": false,
+        "gruppen": {
+          "gruppe": [
+            {
+              "name": "Standard-Kopfzeile BGHW (RuL)",
+              "technischerName": "Standard-Kopfzeile (RuL)",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": [
+                  {
+                    "typ": "KOPFZEILEEINGABEVARIABLE",
+                    "name": "Z_Standard_Kopfzeile__RuL__rtvKopfzeileByLogin_login_IN",
+                    "beschriftung": "login",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 1,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "aufrufparameter": "login",
+                    "freieEingabeErlaubt": true,
+                    "inputWebserviceattribut": "rtvKopfzeileByLogin_login_IN"
+                  },
+                  {
+                    "typ": "KOPFZEILEEINGABEVARIABLE",
+                    "name": "Z_Standard_Kopfzeile__RuL__rtvKopfzeileByLogin_aktenzeichen_IN",
+                    "beschriftung": "aktenzeichen",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 2,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "aufrufparameter": "aktenzeichen",
+                    "freieEingabeErlaubt": true,
+                    "inputWebserviceattribut": "rtvKopfzeileByLogin_aktenzeichen_IN"
+                  },
+                  {
+                    "typ": "KOPFZEILEEINGABEVARIABLE",
+                    "name": "Z_Standard_Kopfzeile__RuL__rtvKopfzeileByLogin_personID_IN",
+                    "beschriftung": "personID",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 3,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "aufrufparameter": "personid",
+                    "freieEingabeErlaubt": true,
+                    "inputWebserviceattribut": "rtvKopfzeileByLogin_personID_IN",
+                    "quellWebserviceattribut": "rtvVersicherungsfallByID_personID_OUT"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "typ": "SACHBEARBEITER_DATENERMITTLUNG",
+        "technischerName": "Sachbearbeiterdatenermittlung",
+        "sichtbar": true,
+       "gruppen": {
+          "gruppe": [
+            {
+              "name": "Standard-SB-Block (RuL)",
+              "technischerName": "Standard-SB-Block (RuL)",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": [
+                  {
+                    "typ": "SACHBEARBEITEREINGEABEVARIABLE",
+                    "name": "Z_Standard_SB_Block__RuL__rtvSachbearbeiterByLogin_login_IN",
+                    "beschriftung": "login",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 1,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "aufrufparameter": "login",
+                    "freieEingabeErlaubt": true,
+                    "inputWebserviceattribut": "rtvSachbearbeiterByLogin_login_IN"
+                  },
+                  {
+                    "typ": "SACHBEARBEITEREINGEABEVARIABLE",
+                    "name": "Z_Standard_SB_Block__RuL__rtvSachbearbeiterByLogin_aktenzeichen_IN",
+                    "beschriftung": "aktenzeichen",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 2,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "aufrufparameter": "aktenzeichen",
+                    "freieEingabeErlaubt": true,
+                    "inputWebserviceattribut": "rtvSachbearbeiterByLogin_aktenzeichen_IN"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "typ": "FORMULARVARIABLEN",
+        "technischerName": "Formularvariablen",
+        "sichtbar": true,
+        "gruppen": {
+          "gruppe": [
+            {
+              "name": "Formularvariablen",
+              "technischerName": "Formularvariablen",
+              "gruppen": {
+                "gruppe": [
+                  {
+                    "name": "Versicherte/r",
+                    "technischerName": "Versicherte/r",
+                    "gruppen": {
+                      "gruppe": []
+                    },
+                    "variablen": {
+                      "variable": [
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "LV_000_20001",
+                          "beschriftung": "Nachname, Vorname",
+                          "hinweistext": "",
+                          "controltyp": "TEXTFELD_EINZEILIG",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 1,
+                            "spalte": 1,
+                            "breite": 5
+                          },
+                          "sichtbar": true,
+                          "pflicht": true,
+                          "editierbar": false,
+                          "bedingungen": {
+                            "bedingung": []
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        },
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "LV_000_20002",
+                          "beschriftung": "_",
+                          "hinweistext": "",
+                          "controltyp": "TEXTFELD_EINZEILIG",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 1,
+                            "spalte": 6,
+                            "breite": 2
+                          },
+                          "sichtbar": true,
+                          "pflicht": true,
+                          "editierbar": false,
+                          "bedingungen": {
+                            "bedingung": []
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "Versand-/Adressaten-Info",
+                    "technischerName": "Versand-/Adressaten-Info",
+                    "gruppen": {
+                      "gruppe": []
+                    },
+                    "variablen": {
+                      "variable": [
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "AV_000_10100",
+                          "beschriftung": "Versandart ",
+                          "hinweistext": "",
+                          "controltyp": "AUSWAHLLISTE",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 1,
+                            "spalte": 1,
+                            "breite": 5
+                          },
+                          "sichtbar": true,
+                          "pflicht": false,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": []
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        },
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "AV_000_10102",
+                          "beschriftung": "Zustellungshinweis",
+                          "hinweistext": "",
+                          "controltyp": "AUSWAHLLISTE",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 2,
+                            "spalte": 1,
+                            "breite": 5
+                          },
+                          "sichtbar": true,
+                          "pflicht": false,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": []
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        },
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "AV_000_10029",
+                          "beschriftung": "Ihr Zeichen",
+                          "hinweistext": "",
+                          "controltyp": "TEXTFELD_EINZEILIG",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 3,
+                            "spalte": 1,
+                            "breite": 5
+                          },
+                          "sichtbar": true,
+                          "pflicht": false,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": []
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        },
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "AV_000_10030",
+                          "beschriftung": "Ihre Nachricht vom",
+                          "hinweistext": "",
+                          "controltyp": "KALENDER",
+                          "datentyp": "DATUM",
+                          "position": {
+                            "zeile": 4,
+                            "spalte": 1
+                          },
+                          "sichtbar": true,
+                          "pflicht": false,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": []
+                          },
+                          "muster": "##.##.####",
+                          "zeilenzuordnungVerwenden": false
+                        },
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "LV_000_90001",
+                          "beschriftung": "Bezug (Freitext)",
+                          "hinweistext": "",
+                          "controltyp": "TEXTFELD_EINZEILIG",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 5,
+                            "spalte": 1,
+                            "breite": 5
+                          },
+                          "sichtbar": true,
+                          "pflicht": false,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": []
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "Text-Daten/-Auswahl",
+                    "technischerName": "Text-Daten/-Auswahl",
+                    "gruppen": {
+                      "gruppe": []
+                    },
+                    "variablen": {
+                      "variable": [
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "LV_000_90002",
+                          "beschriftung": "anderer UVTräger / KV zuständig ?",
+                          "hinweistext": "",
+                          "controltyp": "AUSWAHLLISTE",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 1,
+                            "spalte": 1,
+                            "breite": 5
+                          },
+                          "sichtbar": true,
+                          "pflicht": true,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": []
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        },
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "LV_000_90010",
+                          "beschriftung": "Hinweis",
+                          "hinweistext": "",
+                          "controltyp": "TEXTFELD_EINZEILIG",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 2,
+                            "spalte": 1,
+                            "breite": 6
+                          },
+                          "sichtbar": true,
+                          "pflicht": false,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": [
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "SICHTBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              },
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "EDITIERBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              },
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "PFLICHTFELD",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              }
+                            ]
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        },
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "LV_000_70003",
+                          "beschriftung": "zuständiger UVTr. (1)",
+                          "hinweistext": "",
+                          "controltyp": "TEXTFELD_EINZEILIG",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 3,
+                            "spalte": 1,
+                            "breite": 5
+                          },
+                          "sichtbar": true,
+                          "pflicht": false,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": [
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "SICHTBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              },
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "PFLICHTFELD",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              },
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "EDITIERBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              }
+                            ]
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        },
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "LV_000_70004",
+                          "beschriftung": "(2)",
+                          "hinweistext": "",
+                          "controltyp": "TEXTFELD_EINZEILIG",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 4,
+                            "spalte": 1,
+                            "breite": 5
+                          },
+                          "sichtbar": true,
+                          "pflicht": false,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": [
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "SICHTBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              },
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "EDITIERBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              }
+                            ]
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        },
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "LV_000_70005",
+                          "beschriftung": "(3)",
+                          "hinweistext": "",
+                          "controltyp": "TEXTFELD_EINZEILIG",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 5,
+                            "spalte": 1,
+                            "breite": 5
+                          },
+                          "sichtbar": true,
+                          "pflicht": false,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": [
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "SICHTBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              },
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "EDITIERBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              }
+                            ]
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        },
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "LV_000_70006",
+                          "beschriftung": "(4)",
+                          "hinweistext": "",
+                          "controltyp": "TEXTFELD_EINZEILIG",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 6,
+                            "spalte": 1,
+                            "breite": 5
+                          },
+                          "sichtbar": true,
+                          "pflicht": false,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": [
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "SICHTBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              },
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "EDITIERBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              }
+                            ]
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        },
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "LV_000_70013",
+                          "beschriftung": "(5)",
+                          "hinweistext": "",
+                          "controltyp": "TEXTFELD_EINZEILIG",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 7,
+                            "spalte": 1,
+                            "breite": 5
+                          },
+                          "sichtbar": true,
+                          "pflicht": false,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": [
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "SICHTBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              },
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "EDITIERBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              }
+                            ]
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        },
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "LV_000_70014",
+                          "beschriftung": "(6)",
+                          "hinweistext": "",
+                          "controltyp": "TEXTFELD_EINZEILIG",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 8,
+                            "spalte": 1,
+                            "breite": 5
+                          },
+                          "sichtbar": true,
+                          "pflicht": false,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": [
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "SICHTBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              },
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "EDITIERBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              }
+                            ]
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        },
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "LV_000_70015",
+                          "beschriftung": "(7)",
+                          "hinweistext": "",
+                          "controltyp": "TEXTFELD_EINZEILIG",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 9,
+                            "spalte": 1,
+                            "breite": 5
+                          },
+                          "sichtbar": true,
+                          "pflicht": false,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": [
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "SICHTBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              },
+                              {
+                                "referenzfeld": "LV_000_90002",
+                                "regeltyp": "EDITIERBAR",
+                                "operation": "GLEICH",
+                                "wert": "anderer UV-Träger zuständig"
+                              }
+                            ]
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        },
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "LV_000_90003",
+                          "beschriftung": "Unterlagen sind ...",
+                          "hinweistext": "",
+                          "controltyp": "AUSWAHLLISTE",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 10,
+                            "spalte": 1,
+                            "breite": 5
+                          },
+                          "sichtbar": true,
+                          "pflicht": false,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": []
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        },
+                        {
+                          "typ": "FORMULARVARIABLE",
+                          "name": "LV_000_90004",
+                          "beschriftung": "Freitext",
+                          "hinweistext": "",
+                          "controltyp": "TEXTFELD_MEHRZEILIG",
+                          "datentyp": "TEXT",
+                          "position": {
+                            "zeile": 11,
+                            "spalte": 1
+                          },
+                          "sichtbar": true,
+                          "pflicht": false,
+                          "editierbar": true,
+                          "bedingungen": {
+                            "bedingung": []
+                          },
+                          "zeilenzuordnungVerwenden": false
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "variablen": {
+                "variable": [
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "LV_000_20018",
+                    "beschriftung": "PLZ / Ort",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "ZAHL",
+                    "position": {
+                      "zeile": 1,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": true,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": false
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "LV_000_20019",
+                    "beschriftung": "_",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 2,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": true,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": false
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_00060",
+                    "beschriftung": "Betreff",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 3,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": true,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": false
+                  },
+                 {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "LV_000_20015",
+                    "beschriftung": "Straße / Haus-Nr. / Zusatz",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 4,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": true,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "typ": "ADRESSTYP",
+        "technischerName": "Adresstyp",
+        "sichtbar": true,
+        "gruppen": {
+          "gruppe": [
+            {
+              "technischerName": "Adresstyp",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": [
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10103",
+                    "beschriftung": "Anrede",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 1,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10104",
+                    "beschriftung": "Adressat (Zeile 1)",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 2,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": true,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10105",
+                    "beschriftung": "Adressat (Zeile 2)",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 3,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10106",
+                    "beschriftung": "Adressat (Zeile 3)",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 4,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10107",
+                    "beschriftung": "Adressat (Zeile 4)",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 5,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10108",
+                    "beschriftung": "Adressat (Zeile 5)",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 6,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10109",
+                    "beschriftung": "Adressat (Zeile 6)",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 7,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "LV_000_70051",
+                    "beschriftung": "Briefanrede",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 8,
+                      "spalte": 1
+                    },
+                   "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "typ": "KOPFZEILE",
+        "technischerName": "Kopfzeile",
+        "sichtbar": false,
+       "gruppen": {
+          "gruppe": [
+            {
+              "technischerName": "Kopfzeile",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": [
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10000",
+                    "beschriftung": "Absender (über Adressfeld)",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 1,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10002",
+                    "beschriftung": "Aktionslogo",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 2,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10003",
+                    "beschriftung": "Logo UV-Träger",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 3,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10004",
+                    "beschriftung": "Standort / Abteilung / Bere...",
+                    "hinweistext": "Standort / Abteilung / Bereich (1)",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 4,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10005",
+                    "beschriftung": "Standort / Abteilung / Bere...",
+                    "hinweistext": "Standort / Abteilung / Bereich (2)",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 5,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10006",
+                    "beschriftung": "Organisationseinheit",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 6,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10138",
+                    "beschriftung": "Kopfzeile_Folgeseite_Spalte links: Zeile 1",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 9,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10139",
+                    "beschriftung": "Kopfzeile_Folgeseite_Spalte links: Zeile 2",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 10,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10140",
+                    "beschriftung": "Kopfzeile_Folgeseite_Spalte rechts: Zeile 1",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 11,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10141",
+                    "beschriftung": "Kopfzeile_Folgeseite_Spalte rechts: Zeile 2",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 12,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_00062",
+                    "beschriftung": "Barcode/Datamatrix",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 13,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "typ": "FUSSZEILE",
+        "technischerName": "Fußzeile",
+        "sichtbar": false,
+        "gruppen": {
+          "gruppe": [
+            {
+              "technischerName": "Fußzeile",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": [
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10009",
+                    "beschriftung": "Fußzeile Spalte 1: Zeile 1",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 1,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10010",
+                    "beschriftung": "Fußzeile Spalte 1: Zeile 2",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 2,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10011",
+                    "beschriftung": "Fußzeile Spalte 1: Zeile 3",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 3,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10012",
+                    "beschriftung": "Fußzeile Spalte 1: Zeile 4",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                   "position": {
+                      "zeile": 4,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10013",
+                    "beschriftung": "Fußzeile Spalte 1: Zeile 5",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 5,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10014",
+                    "beschriftung": "Fußzeile Spalte 2: Zeile 1",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 6,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10015",
+                    "beschriftung": "Fußzeile Spalte 2: Zeile 2",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 7,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10016",
+                    "beschriftung": "Fußzeile Spalte 2: Zeile 3",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 8,
+                      "spalte": 1
+                    },
+                   "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10017",
+                    "beschriftung": "Fußzeile Spalte 2: Zeile 4",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 9,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                 {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10018",
+                    "beschriftung": "Fußzeile Spalte 2: Zeile 5",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 10,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10019",
+                    "beschriftung": "Fußzeile Spalte 3: Zeile 1",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 11,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10020",
+                    "beschriftung": "Fußzeile Spalte 3: Zeile 2",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 12,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10021",
+                    "beschriftung": "Fußzeile Spalte 3: Zeile 3",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 13,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10022",
+                    "beschriftung": "Fußzeile Spalte 3: Zeile 4",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 14,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10023",
+                    "beschriftung": "Fußzeile Spalte 3: Zeile 5",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 15,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10024",
+                    "beschriftung": "Fußzeile Spalte 4: Zeile 1",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 16,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10025",
+                    "beschriftung": "Fußzeile Spalte 4: Zeile 2",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 17,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10026",
+                    "beschriftung": "Fußzeile Spalte 4: Zeile 3",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 18,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10027",
+                    "beschriftung": "Fußzeile Spalte 4: Zeile 4",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 19,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10028",
+                    "beschriftung": "Fußzeile Spalte 4: Zeile 5",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 20,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "typ": "SACHBEARBEITER",
+        "technischerName": "Sachbearbeiter",
+        "sichtbar": true,
+        "gruppen": {
+          "gruppe": [
+            {
+              "technischerName": "Sachbearbeiter",
+              "gruppen": {
+                "gruppe": []
+              },
+              "variablen": {
+                "variable": [
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10031",
+                    "beschriftung": "Unser Zeichen",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 1,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10032",
+                    "beschriftung": "Dokument_Kommblock_UnserZei...",
+                    "hinweistext": "Dokument_Kommblock_UnserZeichen2",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 2,
+                      "spalte": 1
+                    },
+                    "sichtbar": false,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10033",
+                    "beschriftung": "Ansprechpartner/in",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 3,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10034",
+                    "beschriftung": "Telefon",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 4,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10035",
+                    "beschriftung": "Fax",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 5,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10036",
+                    "beschriftung": "E-Mail",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 6,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": true,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  },
+                  {
+                    "typ": "FORMULARVARIABLE",
+                    "name": "AV_000_10037",
+                    "beschriftung": "Datum",
+                    "hinweistext": "",
+                    "controltyp": "TEXTFELD_EINZEILIG",
+                    "datentyp": "TEXT",
+                    "position": {
+                      "zeile": 7,
+                      "spalte": 1
+                    },
+                    "sichtbar": true,
+                    "pflicht": false,
+                    "editierbar": false,
+                    "bedingungen": {
+                      "bedingung": []
+                    },
+                    "zeilenzuordnungVerwenden": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
